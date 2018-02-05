@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	var list = [{INDUSTRY_CODE:"A",INDUSTRY_CLASS_NAME:"alice"},{INDUSTRY_CODE:"B",INDUSTRY_CLASS_NAME:"alex"},{INDUSTRY_CODE:"B",INDUSTRY_CLASS_NAME:"eric"}];
+		function test(){
+		var status = "";
+		var fList = {};
+
+		list.forEach(function(item){
+			if(fList[item.INDUSTRY_CODE] !== undefined){
+				fList[item.INDUSTRY_CODE].push(item.INDUSTRY_CLASS_NAME);
+			}else if(fList[item.INDUSTRY_CODE] === undefined){
+				fList[item.INDUSTRY_CODE] = [];
+				fList[item.INDUSTRY_CODE].push(item.INDUSTRY_CLASS_NAME);
+			}
+		});
+		console.log(fList);
+}
+	</script>
+</head>
+<body>
+<div>
+	{A: Array(1), B: Array(2)}
+A
+:
+["alice"]
+B
+:
+(2) ["alex", "eric"]
+</div>
+
+</body>
+</html>
