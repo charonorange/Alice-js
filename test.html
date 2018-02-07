@@ -1,0 +1,39 @@
+<html>
+<head>
+<title></title>
+
+</head>
+
+<style>
+        .test{
+                height: 100px;
+                width: 100px;
+                background-color: greenyellow;
+            }
+            .citem{
+                height: 500px;
+                width: 100px;
+                background-color: yellow;
+            }
+    </style>
+<body>
+    <div id="test" name="test" class="test" alice="alice">
+111
+<div class="iteam" field="1">1</div>
+<div class="iteam" field="2">2</div>
+<div class="iteam" field="3">3</div>
+<div class="iteam" field="4">4</div>
+</div>
+
+</body>
+<script>
+        var parentItem=document.getElementById("test");
+            parentItem.addEventListener("click",function(e){
+                console.log(e);
+                
+                var alice = e.target.getAttribute("field");
+                console.log(alice);
+            })
+    
+    </script>
+</html>
